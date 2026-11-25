@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#22251f">
+  <meta name="description" content="Raian Food, Созақ. Донер, бургер, пицца және чикен. Жеткізу — 500 ₸. Мәзірден таңдап, WhatsApp арқылы тапсырыс беріңіз.">
+  <title>Raian Food — Дәмді тағам, жақсы көңіл-күй</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+ <a class="skip-link" href="#menu" data-i18n="skip">Мәзірге өту</a>
+ <div class="topline"><div class="container"><span><span class="sun-icon">✦</span> <span data-i18n="topline">Жақсы күн дәмді тағамнан басталады</span></span><a href="#how" data-i18n="howLink">Қалай тапсырыс беремін?</a></div></div>
+ <header class="header"><div class="container header-inner">
+  <a href="#" class="brand" aria-label="Raian Food"><img src="./assets/logo.svg" alt="Raian Food" width="177" height="55"></a>
+  <a class="location-link" href="#contacts"><span data-icon="pin"></span><span><strong data-i18n="location">Созақ ауылы</strong><small data-i18n="hours">Күн сайын 10:00–23:00</small></span></a>
+  <div class="search-wrap"><span data-icon="search"></span><input id="search" type="search" placeholder="Бүгін не жейміз?" aria-label="Тағам іздеу" autocomplete="off"><kbd>⌕</kbd></div>
+  <a class="header-phone" href="tel:+77759757501"><strong>+7 775 975 7501</strong><small data-i18n="orderPhone">Тапсырыс қабылдаймыз</small></a>
+  <div class="language" role="group" aria-label="Тіл / Язык"><button type="button" data-lang="kk" aria-pressed="true">ҚАЗ</button><button type="button" data-lang="ru" aria-pressed="false">РУС</button></div>
+  <button class="icon-button header-cart" type="button" data-action="cart" aria-label="Себетті ашу"><span data-icon="bag"></span><span class="cart-badge" id="header-count">0</span></button>
+ </div></header>
+ <div class="container layout">
+  <aside class="sidebar" aria-label="Мәзір санаттары">
+   <div class="side-title" data-i18n="ourMenu">Біздің мәзір</div>
+   <nav id="category-nav"></nav>
+   <div class="side-links"><a href="#contacts"><span data-icon="pin"></span><span data-i18n="contacts">Мекенжай</span></a><a href="#reviews"><span data-icon="star"></span><span data-i18n="reviews">Пікірлер</span></a><a href="#faq"><span data-icon="question"></span><span>FAQ</span></a></div>
+   <div class="side-note"><span data-icon="phone"></span><strong data-i18n="hungry">Сұрағың бар ма?</strong><p data-i18n="help">Таңдауға көмектесеміз.</p><a href="https://wa.me/77759757501" target="_blank" rel="noopener noreferrer">WhatsApp</a></div>
+  </aside>
+  <main id="main">
+   <section class="hero" aria-label="Raian Food">
+    <div class="hero-content"><span class="eyebrow">RAIAN FOOD · <span data-i18n="heroPlace">СОЗАҚ</span></span><h1 data-i18n-html="heroTitle">Дәмді тағам.<br><em>Жақсы көңіл-күй.</em></h1><p data-i18n="heroDesc">Сүйікті дәмдерің бір жерде. Таңда, тапсырыс бер, рақаттан!</p><a class="button primary" href="#menu"><span data-i18n="seeMenu">Мәзірді қарау</span><span data-icon="utensils"></span></a><div class="hero-mini"><span data-icon="spark"></span><span data-i18n="heroMini">Бүгін өзіңді дәмдімен қуант</span></div></div>
+    <img class="hero-photo" src="./assets/burger.webp" alt="Бургер / Бургер" fetchpriority="high" width="1200" height="800"><div class="hero-price"><small data-i18n="burgerFrom">Бургерлер</small><strong>1 450 ₸<span data-i18n="fromSuffix">бастап</span></strong></div>
+   </section>
+   <div class="benefits"><div><span data-icon="scooter"></span><span><strong data-i18n="delivery500">Жеткізу — 500 ₸</strong><small data-i18n="deliveryArea">Мекенжайды қызметкер нақтылайды</small></span></div><div><span data-icon="bag"></span><span><strong data-i18n="pickupTitle">Өзіңмен алып кет</strong><small data-i18n="pickupDesc">Алдын ала тапсырыс бер</small></span></div><div><span data-icon="table"></span><span><strong data-i18n="tablesTitle">Залда жайғас</strong><small data-i18n="tablesDesc">6 үстел · әр үстелде 4 орын</small></span></div></div>
+   <section class="menu-section" id="menu">
+    <div class="section-heading"><div><span class="eyebrow accent" data-i18n="chooseEyebrow">НЕ ЖЕГІҢ КЕЛІП ТҰР?</span><h2 id="menu-title">Көңілің қалаған дәм</h2></div><span class="result-count" id="result-count"></span></div>
+    <div class="order-modes" id="order-modes" role="group" aria-label="Тапсырыс түрі"></div>
+    <div class="mobile-categories" id="mobile-categories"></div>
+    <div class="product-grid" id="product-grid"></div>
+    <p class="photo-note" data-i18n="photoNote">Фотолар — көрнекілік үшін. Тағам құрамы мен аллергендер туралы қызметкерден сұраңыз.</p>
+   </section>
+   <section class="how-section" id="how"><div class="section-heading"><div><span class="eyebrow accent" data-i18n="easy">БӘРІ ОҢАЙ</span><h2 data-i18n="howTitle">Тапсырыс қалай беріледі?</h2></div><span data-icon="spark"></span></div><div class="steps"><div><span class="step-icon" data-icon="bag"></span><h3 data-i18n="step1Title">Сүйікті тағамыңды таңда</h3><p data-i18n="step1">Себетке қосып, жеткізу, алып кету немесе залда тамақтануды таңда.</p></div><div><span class="step-icon" data-icon="chat"></span><h3 data-i18n="step2Title">WhatsApp-та нақтыла</h3><p data-i18n="step2">Дайын тапсырыс мәтінін жібер. Қызметкер қолжетімділікті және төлем реквизитін растайды.</p></div><div><span class="step-icon" data-icon="receipt"></span><h3 data-i18n="step3Title">Төлем жасап, чек жібер</h3><p data-i18n="step3">Төлеген соң чекті сол чатқа тірке. Қызметкер чекті тексергеннен кейін төлем расталады.</p></div></div><div class="payment-alert"><span data-icon="info"></span><div><strong data-i18n="kaspiUnavailable">Kaspi QR уақытша қолжетімсіз</strong><p data-i18n="kaspiInstruction">Алдымен тапсырысты WhatsApp-қа жіберіңіз. Қызметкерден дұрыс реквизитті алған соң төлем жасап, чекті жіберіңіз. Сайт төлемді автоматты түрде растамайды.</p></div></div></section>
+   <section id="reviews" class="reviews-section"><div class="review-mark" data-icon="star"></div><div><span class="eyebrow accent">2GIS</span><h2 data-i18n="reviewTitle">Сенің пікірің бізге маңызды</h2><p data-i18n="reviewDesc">Raian Food туралы пікірлерді 2GIS-тен оқы немесе өз әсеріңмен бөліс.</p></div><a class="button secondary" href="https://2gis.kz/firm/70000001118456702/tab/reviews" target="_blank" rel="noopener noreferrer" data-i18n="readReviews">2GIS-тегі пікірлер</a></section>
+   <section class="contacts-section" id="contacts"><div class="contact-info"><span class="eyebrow accent" data-i18n="visit">КЕЛ, ҚОНАҚ БОЛ</span><h2 data-i18n="contactTitle">Созақта кездесеміз!</h2><p class="address" data-i18n="fullAddress">Түркістан облысы, Созақ ауданы, Созақ ауылы</p><div class="contact-line"><span data-icon="clock"></span><span data-i18n="hours">Күн сайын 10:00–23:00</span></div><a class="contact-line" href="tel:+77759757501"><span data-icon="phone"></span><strong>+7 775 975 7501</strong></a><p class="muted" data-i18n="mapNote">Нақты орналасу нүктесі картада белгіленген.</p><a class="button secondary" href="https://2gis.kz/firm/70000001118456702" target="_blank" rel="noopener noreferrer" data-i18n="open2gis">2GIS-те ашу</a></div><div class="map-wrap"><iframe id="map" title="Raian Food картасы / Карта Raian Food" src="https://www.openstreetmap.org/export/embed.html?bbox=68.46336%2C44.13220%2C68.48336%2C44.14420&layer=mapnik&marker=44.138201%2C68.473363" loading="lazy" referrerpolicy="no-referrer"></iframe><a class="map-caption" href="https://2gis.kz/firm/70000001118456702" target="_blank" rel="noopener noreferrer"><span data-icon="pin"></span><strong>Raian Food</strong><span data-i18n="location">Созақ ауылы</span></a></div></section>
+   <section id="faq" class="faq-section"><span class="eyebrow accent" data-i18n="faqEyebrow">СҰРАҚТАРЫҢА ЖАУАП</span><h2 data-i18n="faqTitle">Жиі қойылатын сұрақтар</h2><div id="faq-list"></div></section>
+   <footer><img src="./assets/logo.svg" width="148" height="46" alt="Raian Food"><p data-i18n="slogan">Дәмді тағам — жақсы көңіл-күй!</p><a href="#" data-i18n="backTop">Жоғарыға</a><span>© <span id="year">2026</span> Raian Food</span></footer>
+  </main>
+  <aside class="cart-panel" id="desktop-cart" aria-label="Себет"><div id="cart-content"></div></aside>
+ </div>
+ <button class="mobile-cart button primary" data-action="cart" id="mobile-cart" type="button"><span data-icon="bag"></span><span data-i18n="yourCart">Сенің себетің</span><span id="mobile-cart-total">0 ₸</span><span id="mobile-cart-count" class="count-pill">0</span></button>
+ <dialog id="product-dialog" class="modal product-modal" aria-labelledby="product-dialog-title"><button class="close-button" type="button" data-close="product-dialog" aria-label="Жабу / Закрыть">×</button><div id="product-dialog-content"></div></dialog>
+ <dialog id="checkout-dialog" class="modal checkout-modal" aria-labelledby="checkout-title"><button class="close-button" type="button" data-close="checkout-dialog" aria-label="Жабу / Закрыть">×</button><div id="checkout-content"></div></dialog>
+ <dialog id="cart-dialog" class="modal mobile-cart-modal" aria-labelledby="mobile-cart-title"><button class="close-button" type="button" data-close="cart-dialog" aria-label="Жабу / Закрыть">×</button><div id="mobile-cart-content"></div></dialog>
+ <div class="toast" id="toast" role="status" aria-live="polite"></div>
+ <noscript><p class="noscript">Тапсырыс беру үшін JavaScript қосыңыз немесе <a href="tel:+77759757501">+7 775 975 7501</a> нөміріне қоңырау шалыңыз.</p></noscript>
+</body>
+</html>
